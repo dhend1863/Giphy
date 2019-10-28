@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
     populateButtons(searchArray, 'searchButton', '#buttonsArea');
     console.log("Page Loaded");
 })
