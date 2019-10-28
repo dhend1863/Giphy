@@ -1,5 +1,6 @@
-$(function () {
+$(function(){
     populateButtons(searchArray, 'searchButton', '#buttonsArea');
+    console.log("Page Loaded");
 })
 
 var searchArray = ['Will Ferrell', 'Chris Farley', 'Dave Chappelle'];
@@ -18,7 +19,7 @@ function populateButtons(searchArray, classToAdd, areaToAddTo) {
 $(document).on('click','.searchButton',function(){
     $('#searches').empty();
     var type = $(this).data('type');
-    var queryURL = 'http://api.giphy.com/v1/gifs/search?q='+type+'&api_key=WgNLGvTrbhuKKsNMY5e4qj7jG7LxN1EY&limit=8';
+    var queryURL = 'http://api.giphy.com/v1/gifs/search?q='+type+'&api_key=WgNLGvTrbhuKKsNMY5e4qj7jG7LxN1EY&limit=10';
     $.ajax({url:queryURL,method:'GET'})
     .done(function(response){
         for(var i=0; i<response.data.length;i++){
