@@ -1,6 +1,5 @@
 $(function () {
     populateButtons(searchArray, 'searchButton', '#buttonsArea');
-    console.log("Page Loaded");
 })
 
 var searchArray = ['Will Ferrell', 'Chris Farley', 'Dave Chappelle'];
